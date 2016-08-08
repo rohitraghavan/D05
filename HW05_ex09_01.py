@@ -7,11 +7,23 @@
 # Imports
 
 # Body
+def read_check_words():
+	"""This method reads a file and prints words > 20 chars"""
+	try:
+		words_file = open("words.txt")
+	except:
+		print("Something went wrong")
+		return
+
+	for line in words_file:
+		words = line.strip()
+		if len(words) > 20:
+			print(words)
 
 
 ##############################################################################
 def main():
-    pass  # Call your functions here.
+    read_check_words()
 
 if __name__ == '__main__':
     main()
