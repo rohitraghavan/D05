@@ -21,15 +21,15 @@ def even_odd():
 
     # Odd/even check, and print message
     if input_no % 2 == 0:
-        print ("{} is an even integer".format(repr(input_no)))
+        print ("{} is an even integer".format(input_no))
     else:
-        print ("{} is an odd integer".format(repr(input_no)))
+        print ("{} is an odd integer".format(input_no))
 
 
 def ten_by_ten():
     """ Prints integers 1 through 100 sequentially in a ten by ten grid."""
     
-    for count in range(1,101):
+    for count in range(1, 101):
         print("{:<3}".format(repr(count)), end="")
         # Prints a new line after printing 10 digits on one line
         if count % 10 == 0:
@@ -42,18 +42,18 @@ def find_average():
     """
     average = 0
     count = 0
-    while(True):
+    while True:
+        user_input = input("Please enter a number (Enter 'done' to exit):")
+        if user_input == 'done':
+            return
         try:
-            user_input = input("Please enter a number (Enter 'done' to exit):")
-            if user_input == 'done':
-                return
             input_no = float(user_input)
         except:
             print("Please enter a valid number (or 'done')")
             continue
         average = (input_no + average * count) / (count + 1)
         count = count + 1
-        print("The average so far is {}".format(repr(average)))
+        print("The average so far is {}".format(average))
 
 
 ##############################################################################

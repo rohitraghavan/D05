@@ -16,9 +16,9 @@ def read_check_words():
 		return
 
 	for line in words_file:
-		words = line.strip()
-		if len(words) > 20:
-			print(words)
+		word = line.strip()
+		if len(word) > 20:
+			print(word)
 
 
 ##############################################################################
